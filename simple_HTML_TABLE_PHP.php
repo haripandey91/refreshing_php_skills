@@ -1,43 +1,25 @@
 <!DOCTYPE html>
 <html>
 <body>
-<style>
-table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
-}
-
-td, th {
-  border: 1px solid #dddddd;
-  text-align: left;
-  padding: 8px;
-}
-
-tr:nth-child(even) {
-  background-color: #dddddd;
-}
-</style>
-
-
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="style.css">
 <?php  
 $ages = array("Harri"=>"28", "Jani"=>"27", "Olli"=>"31", "Pentti"=>"26");
 
 ?>
-<table>
-	<tr>
-    	<th>Name</th>
-        <th>age</th>
-    </tr>
- <?php foreach($ages as $name => $age){ ?>
-    <tr>
-    	<td><?php echo $name; ?></td>
-        <td><?php echo $age;?></td>
-    </tr>
-    <br>	
-   <?php }?>
-
-</table>
-
+<div style="overflow-x:auto;">
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>age</th>
+        </tr>
+        <?php foreach($ages as $name => $age){ ?>
+        <tr>
+            <td><?php echo $name; ?></td>
+            <td><?php echo $age;?></td>
+        </tr><br>	
+        <?php }?>
+    </table>
+    </div>
 </body>
 </html>
